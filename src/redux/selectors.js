@@ -1,6 +1,7 @@
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit'
+// Redux toolkit giúp các component không bị render lại 1 cách không cần thiết (không cần dùng useCallback hay useMemo)
 
-export const todoListSelector = (state) => state.todoLists
+export const todoListSelector = (state) => state.todoList
 export const filterStatusSelector = (state) => state.filters.status
 export const searchTextSelector = (state) => {
     return state.filters.search
